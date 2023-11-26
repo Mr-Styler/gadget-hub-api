@@ -15,7 +15,10 @@ const corsOptions = {
 const appError = require("./utils/appError");
 const errorController = require("./controllers/errorController");
 const authController = require("./controllers/authController");
-
+const userRoute  = require("./routes/userRoute");
+const orderRoute  = require("./routes/orderRoute");
+const reviewRoute  = require("./routes/reviewRoute");
+const productRoute  = require("./routes/productRoute");
 
 // Port 443 is for https
 // Port 80 is for http

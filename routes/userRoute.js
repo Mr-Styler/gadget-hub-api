@@ -6,7 +6,6 @@ const router = require("express").Router();
 const imgHandler = (req, res, next) => {
     if (req.files) {
         req.body.picture = req.files.image[0].filename
-        // req.body.images = req.files.image[0].filename
     }
 
     next()
