@@ -11,7 +11,7 @@ const imgHandler = (req, res, next) => {
     next()
 }
 
-router.use(authController.isAuth)
+router.use(authController.isLoggedIn)
 router.route('/cart').post(authController.addToCart).get(authController.getUsersCart)
 
 router.route('/me').get(userController.getMe).patch(uploadImages, imgHandler, userController.updateMe).delete(userController.deleteMe)
