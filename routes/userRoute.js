@@ -12,7 +12,7 @@ const imgHandler = (req, res, next) => {
 }
 
 router.use(authController.isLoggedIn)
-router.route('/cart').post(authController.addToCart).get(authController.getUsersCart)
+router.route('/cart').post(authController.addToCart).get(authController.getUserCart)
 
 router.route('/me').get(userController.getMe).patch(uploadImages, imgHandler, userController.updateMe).delete(userController.deleteMe)
 
