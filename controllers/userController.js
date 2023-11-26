@@ -1,6 +1,6 @@
 const User = require("../models/userModel");
 const AppError = require("../utils/appError");
-const crudFunc = require("../utils/crudFunc");
+const crudFunc = require("../utils/CRUD");
 const catchAsync = require("../utils/catchAsync");
 
 exports.getMe = (req, res, next) => {
@@ -51,9 +51,9 @@ exports.deleteMe = catchAsync(async (req, res, next) => {
   })
 });
 
-exports.getAllUsers = crudFunc.readAll(User)
+exports.getAllUsers = crudFunc.getAll(User)
 
-exports.getUser = crudFunc.readOne(User)
+exports.getUser = crudFunc.getOne(User)
 
 exports.updateUser = crudFunc.updateOne(User)
 
