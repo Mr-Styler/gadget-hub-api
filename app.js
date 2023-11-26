@@ -62,13 +62,18 @@ app.patch(
 );
 
 // Logged In Routes
+app.use('/api/v1/users', userRoute)
+app.use('/api/v1/products', productRoute)
+app.use('/api/v1/reviews', reviewRoute)
+app.use('/api/v1/orders', orderRoute)
 
 // Today's Work: Error Handling
 app.all("*", (req, res, next) => {
     return next(
-        new appError(`Can't ${req.method} ${req.originalUrl} route on this server.`)
+        new appError(`Can't ${req.method} ${req.originalUrl} route on this server.`, 400)
       );
     });
+
 app.use(errorController);
 
 module.exports = app;
