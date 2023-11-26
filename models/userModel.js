@@ -1,7 +1,5 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
-const otpGenerator = require("otp-generator");
-const Account = require("./accountModel");
 
 const userSchema = new mongoose.Schema({
 	firstname: {
