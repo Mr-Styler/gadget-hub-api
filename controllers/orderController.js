@@ -1,4 +1,4 @@
-const queryFunc = require('./../utils/docFactoryFunc');
+const queryFunc = require('./../utils/CRUD');
 const Order = require('../models/orderModel');
 
 exports.getAllOrders = queryFunc.getAll(Order);

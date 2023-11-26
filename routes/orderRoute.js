@@ -1,4 +1,4 @@
-const orderController = require('./../controllers/order');
+const orderController = require('./../controllers/orderController');
 const authController = require('./../controllers/authController');
 const router = require('express').Router({ mergeParams: true});
 
